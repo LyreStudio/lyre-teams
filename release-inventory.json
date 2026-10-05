@@ -1,0 +1,130 @@
+{
+  "extension": "lyre-teams",
+  "version": "0.1.0-preview.1",
+  "lyreRange": ">=0.1.7 <0.2.0",
+  "capabilities": [
+    "teams-storage-v1"
+  ],
+  "files": [
+    {
+      "path": "client/attention.tsx",
+      "bytes": 3279,
+      "sha256": "7e76eef365887ee573985f0dd523ba7ed305c8249683c464a04fa43e80575ece"
+    },
+    {
+      "path": "client/context.tsx",
+      "bytes": 1612,
+      "sha256": "00e86152e085330d8ce363d4987e5ddb1d2583db756a063c30a8a414a56d12e3"
+    },
+    {
+      "path": "client/data.ts",
+      "bytes": 4095,
+      "sha256": "75f9148e2001982bcb08a4a13f21ce176ebc114e8b4986d44d7ea93365cd1fd7"
+    },
+    {
+      "path": "client/drafts.ts",
+      "bytes": 2358,
+      "sha256": "2cb316f4453490829ab868b8931cd3a4405845a1526f1ad7a5aaa4110892782b"
+    },
+    {
+      "path": "client/index.ts",
+      "bytes": 121,
+      "sha256": "5f3066014829c3fce8b752fb48542168475a73199b16e1234d675e3070536179"
+    },
+    {
+      "path": "client/model.ts",
+      "bytes": 10533,
+      "sha256": "d035cd5661c814b88ef072fb9320d106f68d9fa731635c01408f096942baf51f"
+    },
+    {
+      "path": "client/panel.tsx",
+      "bytes": 642,
+      "sha256": "4f70559e2c719f18b09b52087ee18fb48bda6f71de2421ceb3181a30d2b8b1dd"
+    },
+    {
+      "path": "client/screen.tsx",
+      "bytes": 4281,
+      "sha256": "247f4642cb0a29898b22037cdd64a9ba0953101d4cff4c25e6e30d22ad1ef45f"
+    },
+    {
+      "path": "client/settings.tsx",
+      "bytes": 6962,
+      "sha256": "2a81dd6c3934ab80cef6b9bc4c56544ed26400a43e4cf2b6c379a76bb099a88b"
+    },
+    {
+      "path": "client/task-detail.tsx",
+      "bytes": 28303,
+      "sha256": "0bf236d532f1dc4688eea1013664107efc150df027f20f2cc04fc8498f44a2c3"
+    },
+    {
+      "path": "client/tasks.tsx",
+      "bytes": 11327,
+      "sha256": "0ae9f72638fe300669912c34cb39665f5e12dd7bc48b04c9ebf0e4df4c88e8ae"
+    },
+    {
+      "path": "client/team.tsx",
+      "bytes": 12385,
+      "sha256": "d3f5c2cbfb658c2dafcd8d5305fe34a598f223b2e9a13db6b4ce3a7f0af062e3"
+    },
+    {
+      "path": "client/ui.tsx",
+      "bytes": 22655,
+      "sha256": "bfe6ffc231923bdf1d6bb5850b19041aa16f7681509425f74e4ed22e408a977e"
+    },
+    {
+      "path": "client/view.tsx",
+      "bytes": 9632,
+      "sha256": "ed5b7e55046b641ddd06851e5eabc43f203039f51e37ac9d406a427309350780"
+    },
+    {
+      "path": "index.client.tsx",
+      "bytes": 1560,
+      "sha256": "56eb8cce2548fde11672f93fc466c2be22732d432bc313b69b99501904b5beee"
+    },
+    {
+      "path": "index.server.ts",
+      "bytes": 990,
+      "sha256": "bc337dc2c18f262dc880fb7bdde632039452251b72fb16a0aac73cf3752c963a"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1068,
+      "sha256": "cce14a4e17ac4efc08bfabfe7f411d165e6caad14353ec882213afdcd4b36ca7"
+    },
+    {
+      "path": "package.json",
+      "bytes": 371,
+      "sha256": "a338f91b8098f624e72a592d46ec157b1ea62f8576900940f8dd4df5176c10fe"
+    },
+    {
+      "path": "paseo-plugin.json",
+      "bytes": 230,
+      "sha256": "0774aca7619308c927f20706f9c9ae8deb2357ed5ac3726edc96cf8672a35d31"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5676,
+      "sha256": "64edee6d46a084f913e7fa281dae0ff43c7fcdeaf3754af22db63ba8d6be000f"
+    },
+    {
+      "path": "server/service.ts",
+      "bytes": 14014,
+      "sha256": "8dd02ff791eb36f51889608f98b93010d703b9d75467a4a6af7952deefccd196"
+    },
+    {
+      "path": "server/store.ts",
+      "bytes": 2326,
+      "sha256": "81c27af7e8a8dbd24d8d55cb99c913d161b62875bc15e711281d066da485fa9e"
+    },
+    {
+      "path": "shared/actions.ts",
+      "bytes": 3596,
+      "sha256": "3aeaa6d720f148b6d2d433df82386b2bb5e42673df4e9dac6d37698292512c35"
+    },
+    {
+      "path": "VALIDATION.md",
+      "bytes": 2022,
+      "sha256": "ccaa945a2dcf045096bb1b93f133ed63c2723658e2692feda309235bf472848f"
+    }
+  ]
+}

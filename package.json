@@ -1,0 +1,18 @@
+{
+  "name": "@lyrestudio/teams",
+  "version": "0.1.0-preview.1",
+  "private": true,
+  "description": "Agent teams, persistent assignments and human review for Lyre.",
+  "license": "MIT",
+  "files": [
+    "paseo-plugin.json",
+    "index.client.tsx",
+    "index.server.ts",
+    "client",
+    "server",
+    "shared",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "module"
+}

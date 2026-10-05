@@ -1,0 +1,9 @@
+{
+  "id": "lyre-teams",
+  "description": "Coordinate agents and review their work in Lyre.",
+  "requirements": {
+    "paseo": ">=0.11.0-beta.3 <0.12.0",
+    "lyre": ">=0.1.7 <0.2.0",
+    "capabilities": ["teams-storage-v1"]
+  }
+}

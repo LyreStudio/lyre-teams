@@ -1,6 +1,6 @@
 {
   "name": "@lyrestudio/teams",
-  "version": "0.1.0-preview.2",
+  "version": "0.1.0-preview.3",
   "private": true,
   "description": "Agent teams, persistent assignments and human review for Lyre.",
   "license": "MIT",

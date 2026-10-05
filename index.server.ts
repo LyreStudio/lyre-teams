@@ -6,7 +6,7 @@ import { createTeamService } from "./server/service";
 export default function contribute(server: PluginServerContext) {
   // Older runtimes cannot inject a private data owner. Fail before registering or touching disk.
   if (!server.host?.dataDirectory)
-    throw new Error("TEAMS_HOST_UNSUPPORTED: Lyre 0.1.7 with Teams storage support is required.");
+    throw new Error("TEAMS_HOST_UNSUPPORTED: Lyre 0.1.6 with Teams storage support is required.");
   const service = createTeamService(createBoardStore(server.host.dataDirectory));
   server.handle(readTeams, (input, { paseo }) => service.read(input.workspaceId, paseo));
   server.handle(changeTeams, (input, { paseo }) =>

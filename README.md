@@ -9,22 +9,27 @@ its records locally on the computer doing the work.
 
 ## Compatibility
 
-This is **0.1.0-preview.2**, an early downloadable preview for **Lyre 0.1.7** with
+This is **0.1.0-preview.3**, an early downloadable preview for **Lyre 0.1.6** with
 Teams storage support. Both the host computer and viewing client must run a
-compatible version. Lyre 0.1.6 is incompatible: the listing stays hidden, and
-installation or loading is rejected. Changing a version label alone does not add
-the required host capability.
+compatible implementation. Earlier Lyre 0.1.6 builds without Teams storage and
+the client's negotiated plugin requirement capability are incompatible: the
+listing stays hidden, and installation, loading or invocation is rejected.
+Changing a version label alone does not add the required capabilities.
 
 The foundation SDK requirement is separate: `>=0.11.0-beta.3 <0.12.0`.
-The supported Lyre product range is `>=0.1.7 <0.2.0`. A later product series needs
+The supported Lyre product range is `>=0.1.6 <0.2.0`. A later product series needs
 a newly qualified extension release. Unknown versions and unsupported capabilities
-fail closed. This preview does not claim acceptance on an installed 0.1.7 release
+fail closed. This preview does not claim acceptance on an installed 0.1.6 release
 before that host release exists.
 
 ## Installation
 
-1. Download `lyre-teams-0.1.0-preview.2.zip` and `SHA256SUMS` from this repository's
-   [preview release](https://github.com/LyreStudio/lyre-teams/releases/tag/v0.1.0-preview.2).
+Preview.3 is prepared from the integrated source. Its new ZIP and checksums must
+be published and verified before this download is available; preview.2 remains
+unchanged and requires Lyre 0.1.7.
+
+1. Download `lyre-teams-0.1.0-preview.3.zip` and `SHA256SUMS` from this repository's
+   [preview release](https://github.com/LyreStudio/lyre-teams/releases/tag/v0.1.0-preview.3).
 2. Check the ZIP's SHA-256 against `SHA256SUMS` before extracting. On Windows use
    `Get-FileHash -Algorithm SHA256`; on macOS use `shasum -a 256`.
 3. Extract into a permanent folder on the Lyre host computer. Keep that folder;
@@ -90,7 +95,7 @@ SDK modules. No Python, database server, provider runtime or model credentials a
 included in this download. The host compiles its TypeScript entries in memory.
 
 From the Lyre source checkout, typecheck this package and run its `tests/` suite.
-Use the host's static `plugin check` with `--lyre-version 0.1.7` when checking the
+Use the host's static `plugin check` with `--lyre-version 0.1.6` when checking the
 future target. A static check compiles imports; it does not qualify a running host.
 
 Licensed under MIT. Host-provided dependencies retain their own licenses.

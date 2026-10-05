@@ -1,8 +1,15 @@
 # Preview qualification
 
-Version 0.1.0-preview.2, October 4, 2026. This source preview requires both
-Lyre host and client >=0.1.7 <0.2.0 and real Teams storage support. It is unavailable
-on 0.1.6; a changed version label does not add the required capability.
+Version 0.1.0-preview.3, October 5, 2026. This source preview requires both
+Lyre host and client >=0.1.6 <0.2.0 and real Teams storage support. It is unavailable
+on earlier 0.1.6 implementations missing the required host storage or negotiated
+client capability; a changed version label does not add those capabilities.
+
+The following interface and package receipts describe preview.2's reviewed source.
+The integrated preview.3 source changes product admission, package metadata and
+this documentation. Current source, daemon and package checks are recorded in
+`docs/releases/history/2026-10-04-v017-worktree-integration-checks.md` in LyreStudio.
+Publication and installed acceptance of preview.3 remain separate gates.
 
 This version refines the interface after generating a desktop/phone concept:
 quiet task rows and decision cards, clearer next actions, larger compact controls
@@ -27,7 +34,7 @@ upload-input assertion on a SheetJS license file. This preview is not a qualifie
 Lyre application binary or a green whole-application release. The wider upstream
 source registry also retains baseline drift, separately recorded by the host worktree.
 
-Installed Lyre 0.1.7, physical devices, enlarged native text, native sheets and live
+Installed Lyre 0.1.6, physical devices, enlarged native text, native sheets and live
 accounts require separate host-release qualification. No live account or installed
 user daemon was changed. Human acceptance never fabricates passing checks.
 

@@ -19,7 +19,6 @@ import {
 } from "./model";
 import {
   Button,
-  Card,
   Chevron,
   Choices,
   Dot,
@@ -148,18 +147,18 @@ function TaskGroupList({
         </Text>
         <Text style={s.small}>{tasks.length}</Text>
       </View>
-      <Card>
-        {tasks.map((task, index) => (
+      <View>
+        {tasks.map((task) => (
           <TaskRow
             key={task.id}
             board={board}
             task={task}
-            first={index === 0}
+            first
             selected={task.id === selectedId}
             onSelect={onSelect}
           />
         ))}
-      </Card>
+      </View>
     </View>
   );
 }

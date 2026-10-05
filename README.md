@@ -9,7 +9,7 @@ its records locally on the computer doing the work.
 
 ## Compatibility
 
-This is **0.1.0-preview.1**, an early downloadable preview for **Lyre 0.1.7** with
+This is **0.1.0-preview.2**, an early downloadable preview for **Lyre 0.1.7** with
 Teams storage support. Both the host computer and viewing client must run a
 compatible version. Lyre 0.1.6 is incompatible: the listing stays hidden, and
 installation or loading is rejected. Changing a version label alone does not add
@@ -23,8 +23,8 @@ before that host release exists.
 
 ## Installation
 
-1. Download `lyre-teams-0.1.0-preview.1.zip` and `SHA256SUMS` from this repository's
-   [preview release](https://github.com/LyreStudio/lyre-teams/releases/tag/v0.1.0-preview.1).
+1. Download `lyre-teams-0.1.0-preview.2.zip` and `SHA256SUMS` from this repository's
+   [preview release](https://github.com/LyreStudio/lyre-teams/releases/tag/v0.1.0-preview.2).
 2. Check the ZIP's SHA-256 against `SHA256SUMS` before extracting. On Windows use
    `Get-FileHash -Algorithm SHA256`; on macOS use `shasum -a 256`.
 3. Extract into a permanent folder on the Lyre host computer. Keep that folder;

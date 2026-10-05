@@ -96,8 +96,8 @@ export function TaskDetail({ task, onBack }: { task: Task; onBack: (() => void) 
       ) : null}
       {task.question ? <QuestionNotice task={task} /> : null}
       <Step task={task} />
-      <OwnerSection task={task} />
       <CriteriaSection task={task} />
+      <OwnerSection task={task} />
       <DependenciesSection task={task} />
       <Section title="Attempt and delivery">
         <Card>
@@ -253,7 +253,7 @@ function QuestionNotice({ task }: { task: Task }) {
           placeholder="Write your decision"
         />
       </Field>
-      <View style={L.wrap}>
+      <View style={s.inlineActions}>
         <Button
           variant={task.answer ? "outline" : "primary"}
           label="Save answer"
@@ -281,21 +281,24 @@ function PlannedStep({ task }: { task: Task }) {
   const reason = startBlockedReason(board, task);
   const start = useCallback(() => void send({ kind: "start", taskId: task.id }), [send, task.id]);
   return (
-    <Notice tone="neutral" title="Not started">
-      <Text style={s.muted}>
-        Start sends this assignment, its criteria and any saved answer to the owner’s linked
-        conversation. Nothing starts until you choose it.
-      </Text>
-      <Button
-        variant="primary"
-        label="Start task"
-        busy={pending}
-        busyLabel="Starting..."
-        disabled={reason !== null}
-        hint={reason ?? undefined}
-        onPress={start}
-        style={L.start}
-      />
+    <Notice tone="neutral" title={reason ? "Not started" : "Ready to start"}>
+      <View style={s.nextAction}>
+        <View style={s.nextActionCopy}>
+          <Text style={s.muted}>
+            Start sends this assignment, its criteria and any saved answer to the owner’s linked
+            conversation. Nothing starts until you choose it.
+          </Text>
+        </View>
+        <Button
+          variant={hasOpenQuestion(task) ? "outline" : "primary"}
+          label="Start task"
+          busy={pending}
+          busyLabel="Starting..."
+          disabled={reason !== null}
+          hint={reason ?? undefined}
+          onPress={start}
+        />
+      </View>
       {reason ? <Text style={s.small}>{reason}</Text> : null}
       {error ? <ErrorLine>{error}</ErrorLine> : null}
     </Notice>

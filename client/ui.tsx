@@ -50,8 +50,8 @@ export const L = StyleSheet.create({
   empty: { paddingVertical: space[6], gap: space[1] },
   emptyCenter: { paddingVertical: space[8], alignItems: "center", gap: space[1] },
   split: { flexDirection: "row", gap: space[6], alignItems: "flex-start" },
-  listColumn: { width: 320 },
-  detailColumn: { flex: 1, minWidth: 0 },
+  listColumn: { width: 320, flexShrink: 1 },
+  detailColumn: { flex: 1, minWidth: 0, maxWidth: 720 },
   groupHead: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -111,7 +111,7 @@ function buttonText(colors: PluginTheme["colors"], variant: ButtonVariant): stri
 
 function buildStyles(theme: PluginTheme, compact: boolean) {
   const c = theme.colors;
-  const control = compact ? 44 : 36;
+  const control = compact ? 44 : 32;
   const gutter = compact ? space[4] : space[6];
   const text: TextStyle = { color: c.foreground, fontSize: 14, lineHeight: 20 };
   const small: TextStyle = { color: c.foregroundMuted, fontSize: 12, lineHeight: 16 };
@@ -150,7 +150,7 @@ function buildStyles(theme: PluginTheme, compact: boolean) {
   };
   const input: TextStyle = {
     ...text,
-    backgroundColor: c.surface2,
+    backgroundColor: c.surface0,
     borderWidth: 1,
     borderColor: c.border,
     borderRadius: 8,
@@ -173,8 +173,8 @@ function buildStyles(theme: PluginTheme, compact: boolean) {
     flexDirection: "row",
     alignItems: "center",
     gap: space[1.5],
-    minHeight: compact ? 40 : 32,
-    paddingHorizontal: space[3],
+    minHeight: compact ? 44 : 32,
+    paddingHorizontal: compact ? space[2] : space[3],
     borderRadius: 8,
   };
   const panel: ViewStyle = {
@@ -205,7 +205,7 @@ function buildStyles(theme: PluginTheme, compact: boolean) {
       layouts[layout],
       { ...layouts[layout], ...border },
     ]),
-    rowSelected: { backgroundColor: c.surface2 } satisfies ViewStyle,
+    rowSelected: { backgroundColor: c.surface2, borderRadius: 8 } satisfies ViewStyle,
     pressed: { opacity: 0.8 } satisfies ViewStyle,
     disabled: { opacity: 0.5 } satisfies ViewStyle,
     input,
@@ -222,7 +222,7 @@ function buildStyles(theme: PluginTheme, compact: boolean) {
       gap: space[1.5],
       borderWidth: 1,
       borderColor: c.border,
-      backgroundColor: c.surface2,
+      backgroundColor: "transparent",
       borderRadius: 9999,
       paddingHorizontal: space[2],
       paddingVertical: 2,
@@ -248,8 +248,9 @@ function buildStyles(theme: PluginTheme, compact: boolean) {
       (tone) =>
         ({
           ...panel,
-          borderLeftWidth: 3,
-          borderLeftColor: toneColor(c, tone),
+          ...(tone === "neutral"
+            ? {}
+            : { borderLeftWidth: 3, borderLeftColor: toneColor(c, tone) }),
           padding: compact ? space[3] : space[4],
           gap: space[2],
         }) satisfies ViewStyle,
@@ -266,6 +267,19 @@ function buildStyles(theme: PluginTheme, compact: boolean) {
     tabText: { fontSize: 14, color: c.foregroundMuted } satisfies TextStyle,
     tabTextSelected: { fontSize: 14, color: c.foreground } satisfies TextStyle,
     tabCount: { fontSize: 12, color: c.statusWarning } satisfies TextStyle,
+    inlineActions: (compact
+      ? { gap: space[2] }
+      : {
+          flexDirection: "row",
+          flexWrap: "wrap",
+          justifyContent: "space-between",
+          alignItems: "center",
+          gap: space[2],
+        }) satisfies ViewStyle,
+    nextAction: (compact
+      ? { gap: space[3] }
+      : { flexDirection: "row", alignItems: "center", gap: space[4] }) satisfies ViewStyle,
+    nextActionCopy: (compact ? { gap: space[1] } : { flex: 1, minWidth: 0 }) satisfies ViewStyle,
     actions: (compact
       ? { flexDirection: "column-reverse", gap: space[2] }
       : { flexDirection: "row", justifyContent: "flex-end", gap: space[2] }) satisfies ViewStyle,
@@ -674,7 +688,7 @@ function Chip<Value extends string>({
       onPress={press}
       style={pressStyle}
     >
-      <Text numberOfLines={1} style={s.chipText}>
+      <Text style={s.chipText}>
         {mark}
         {option.label}
       </Text>
